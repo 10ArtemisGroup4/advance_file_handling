@@ -1,11 +1,11 @@
 class FileReader:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, file_name):
+        self.file_name = file_name
 
-    def read_numbers(selfself):
+    def read_numbers(self):
         """Reads numbers from the file and returns them as a list of integers"""
         numbers = []
-        with open(self.file_name, r) as file:
+        with open(self.file_name, 'r') as file:
             for line in file:
                 if line.strip():
                     numbers.append(int(line.strip()))
@@ -32,4 +32,3 @@ class FileWriter:
             even_file.write(even_str)
         with open("odd_numbers.txt", "w") as odd_file:
             odd_file.write(odd_str)
-            
